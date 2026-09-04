@@ -12,7 +12,7 @@ body {
     width: 100vw;
     overflow-x: hidden;
     background: black;
-    background-image: radial-gradient(rgba(253, 253, 253, 0.445) 1px, transparent 0);
+    background-image: radial-gradient(#fdfdfd71 1px, transparent 0);
     background-size: 40px 40px;
     font-family: 'Lucidia Console', monospace;
 }
@@ -26,7 +26,7 @@ body {
     margin: 0;
     box-sizing: border-box;
     justify-content: center;
-    color: white;
+    color: #ffffff;
 }
 
 @media (min-width: 800px) {
@@ -77,27 +77,32 @@ body {
         width: 75%;
         flex-wrap: wrap;
         flex-direction: column;
-        height: auto;
     }
 
     .lineDesktop {
-        border: 1px solid white;
-        width: 85%;
+        border: 1px solid #808080;
+        width: 100%;
+        max-width: 1250px;
         margin: 0;
+        margin-top: 20px;
     }
 
     .footerTextDesktop {
         text-align: center;
-        height: auto;
         margin: 0;
         margin-top: 20px;
         margin-bottom: 40px;
-        font-size: 1.5rem;
+        font-size: 1rem;
+        color: #d3d3d3;
     }
 }
 
 @media (max-width: 800px) {
     .textContainerDesktop {
+        display: none;
+    }
+
+    .footerContentDesktop {
         display: none;
     }
 
@@ -132,6 +137,31 @@ body {
         margin: 0;
         font-size: 1.5rem;
     }
+
+    .footerContentMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .lineMobile {
+        border: 1px solid #808080;
+        width: 100%;
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    .footerTextMobile {
+        text-align: center;
+        margin: 0;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        font-size: 1rem;
+        color: #d3d3d3;
+    }
 }
 
 .footerContainer {
@@ -145,10 +175,16 @@ body {
     width: 100%;
     position: absolute;
     bottom: 0;
+    z-index: 0;
+    background: rgba(180, 93, 93, 0);
+    box-shadow: 0 0 30px #000000;
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+    border: 0 solid #ffffff30;
 }
 
 .link {
-    color: lightseagreen;
+    color: #20b2aa;
 }
 
 a {

@@ -17,9 +17,10 @@
       "description": "Studerer bachelor i datalogi."
     }
     </script>
+    <script src="../js/current-year.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container" role="main">
         <!-- Desktop -->
         <div class="textContainerDesktop">
             <h1 class="titleDesktop">Ditlev Guld</h1>
@@ -33,13 +34,28 @@
             <a class="socialsMobile" href="https://github.com/d-guld" target="_blank">github: <span class="link">@d-guld</span></a>
         </div>
         <!-- Footer -->
-        <!--
-        <div class="footerContainer">
+        <footer class="footerContainer">
             <div class="footerContentDesktop">
                 <hr class="lineDesktop">
-                <p class="footerTextDesktop">placeholder</p>
+                <p class="footerTextDesktop">© <span id="current-year-desktop"></span> · email: mail [@] ditlevguld [.] dk</p>
             </div>
-        </div>
-        -->
+            <div class="footerContentMobile">
+                <hr class="lineMobile">
+                <div class="footerTextMobile">
+                    <p>email: mail [@] ditlevguld [.] dk</p>
+                    <p">© <span id="current-year-mobile"></span></p>
+                </div> 
+            </div>
+        </footer>
     </div>
+    <script>
+      // Set current year in both footers
+      document.addEventListener("DOMContentLoaded", function() {
+          var yearDesktop = document.getElementById("current-year-desktop");
+          var yearMobile = document.getElementById("current-year-mobile");
+          var year = new Date().getFullYear();
+          if (yearDesktop) yearDesktop.textContent = year;
+          if (yearMobile) yearMobile.textContent = year;
+      });
+  </script>
 </body>
