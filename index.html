@@ -21,41 +21,22 @@
 </head>
 <body>
     <div class="container" role="main">
-        <!-- Desktop -->
-        <div class="textContainerDesktop">
-            <h1 class="titleDesktop">Ditlev Guld</h1>
-            <p class="subheadingDesktop">Studerer bachelor i datalogi</p>
-            <a class="socialsDesktop" href="https://github.com/d-guld" target="_blank">github: <span class="link">@d-guld</span></a>
-        </div>
-        <!-- Mobile -->
-        <div class="textContainerMobile">
-            <h1 class="titleMobile">Ditlev Guld</h1>
-            <p class="subheadingMobile">Studerer bachelor i datalogi</p>
-            <a class="socialsMobile" href="https://github.com/d-guld" target="_blank">github: <span class="link">@d-guld</span></a>
-        </div>
-        <!-- Footer -->
-        <footer class="footerContainer">
-            <div class="footerContentDesktop">
-                <hr class="lineDesktop">
-                <p class="footerTextDesktop">© <span id="current-year-desktop"></span> · email: mail [@] ditlevguld [.] dk</p>
-            </div>
-            <div class="footerContentMobile">
-                <hr class="lineMobile">
-                <div class="footerTextMobile">
-                    <p>email: mail [@] ditlevguld [.] dk</p>
-                    <p">© <span id="current-year-mobile"></span></p>
-                </div> 
-            </div>
-        </footer>
+        <!-- Content -->
+        <div class="textContainer">
+            <h1 class="title">Ditlev Guld</h1>
+            <p class="subheading">Studerer bachelor i datalogi</p>
+            <a class="socials" href="https://github.com/d-guld" target="_blank">github: <span class="link">@d-guld</span></a>
+        </div> 
     </div>
-    <script>
-      // Set current year in both footers
-      document.addEventListener("DOMContentLoaded", function() {
-          var yearDesktop = document.getElementById("current-year-desktop");
-          var yearMobile = document.getElementById("current-year-mobile");
-          var year = new Date().getFullYear();
-          if (yearDesktop) yearDesktop.textContent = year;
-          if (yearMobile) yearMobile.textContent = year;
-      });
-  </script>
+    <!-- Footer -->
+    <footer class="footerContainer">
+        <div class="footerContent">
+            <hr class="line">
+            <div class="footerText">
+                <p>email: mail [@] ditlevguld [.] dk</p>
+                <!-- Copyright with current year script -->
+                <p">© <script>document.write(new Date().getFullYear())</script></p>
+            </div> 
+        </div>
+    </footer>
 </body>
